@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-cinema-bg-1;
+    -webkit-font-smoothing: antialiased;
+}
