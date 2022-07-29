@@ -1,2 +1,2 @@
-# react-movies
+# React Movies
 Site de filmes com React
