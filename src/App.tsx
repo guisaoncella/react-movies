@@ -3,7 +3,7 @@ import { Navbar } from "./components/Navbar"
 
 function App() {
     return (
-        <div className="m-12">
+        <div>
             <Navbar/>
             <Outlet/>
         </div>
