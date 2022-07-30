@@ -1,5 +1,41 @@
+import { useState, useEffect } from "react";
+import { MovieCard } from "../components/MovieCard";
+
+const moviesURL = import.meta.env.VITE_API;
+const apiKey = import.meta.env.VITE_API_KEY;
+
 export function Home(){
+    const [topMovies, setTopMovies] = useState<any[]>([]);
+
+    const getTopRatedMovies = async (url: string) => {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        setTopMovies(data.results);
+    }
+
+    useEffect(() => {
+        const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
+        getTopRatedMovies(topRatedUrl);
+    }, [])
+    
     return(
-        <h1>Home</h1>
+        <div>
+            <h2>-Melhores filmes-</h2>
+            <div>
+                {topMovies.length === 0 ? <p>Carregando...</p> : 
+                    topMovies.map(movie =>{
+                        return(
+                            <MovieCard 
+                                title={movie.title} 
+                                overview={movie.overview} 
+                                poster_path={movie.poster_path} 
+                                vote_average={movie.vote_average} 
+                                key={movie.id} />
+                        )
+                    })
+                }
+            </div>
+        </div>
     )
 }
