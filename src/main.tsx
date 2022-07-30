@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App'
+import { Home } from './pages/Home'
+import { Movie } from './pages/Movie'
+import { Search } from './pages/Search'
 
 import './styles/global.css'
 
@@ -11,9 +14,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <BrowserRouter>
             <Routes>
                 <Route element={<App/>}>  
-                    <Route path="/" element={<h1>Home</h1>} />
-                    <Route path="movie/:id" element={<h1>Movie</h1>} />
-                    <Route path="search" element={<h1>Search</h1>} />
+                    <Route path="/" element={<Home/>} />
+                    <Route path="movie/:id" element={<Movie/>} />
+                    <Route path="search" element={<Search/>} />
                 </Route> 
             </Routes>
         </BrowserRouter>
