@@ -31,6 +31,8 @@ export function Home(){
                                 overview={movie.overview} 
                                 poster_path={movie.poster_path} 
                                 vote_average={movie.vote_average} 
+                                id={movie.id}
+                                showLink={true}
                                 key={movie.id} />
                         )
                     })

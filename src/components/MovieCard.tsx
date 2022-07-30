@@ -8,11 +8,22 @@ interface MovieCardProps{
     overview: string;
     poster_path: string;
     vote_average: number;
-    showLink? : true | boolean;
+    id: number;
+    showLink : boolean;
 }
 
 export function MovieCard(props: MovieCardProps){
     return(
-        <h1 className='text-white'>{props.title}</h1>    
+        <div>
+            <img src={imageUrl + props.poster_path} alt={props.title} />
+            <h2>{props.title}</h2>
+            <p>{props.overview}</p>
+            <span>
+                <FaStar /> {props.vote_average}
+            </span>
+            {props.showLink && 
+                <Link to={`/movie/${props.id}`}>Detalhes</Link>
+            }
+        </div>   
     )
 }
