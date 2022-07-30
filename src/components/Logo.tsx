@@ -1,5 +1,13 @@
+import { Link } from "react-router-dom";
+import {BiCameraMovie} from 'react-icons/bi';
+
 export function Logo(){
     return(
-        <div className="bg-cinema-bg-2 text-5xl text-cinema-text-1 font-cursive rounded-full p-8 inline-block">Rmovies</div>
+        <Link to="/">
+            <div className="bg-cinema-bg-2 text-5xl text-cinema-text-1 font-cursive rounded-full p-4  w-max flex gap-2">
+                <BiCameraMovie className="text-cinema-text-1" />
+                Rmovies
+            </div>
+        </Link>
     )
 }
