@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 
 export function Navbar(){
     return(
-        <nav>
+        <nav className="flex items-center justify-between border border-white">
             <Logo/>
             <form>
                 <input type="text" placeholder="Busque um filme" />
