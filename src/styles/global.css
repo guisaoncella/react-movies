@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body{
-    @apply bg-cinema-bg-1;
+    @apply bg-cinema-bg-1 mb-12;
     -webkit-font-smoothing: antialiased;
 }
