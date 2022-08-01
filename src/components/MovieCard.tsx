@@ -18,7 +18,7 @@ export function MovieCard(props: MovieCardProps){
     return(
         <div className='flex flex-col bg-cinema-bg-2 rounded-md w-[50%] lg:w-2/12 sm:w-3/12 p-4 justify-between'>
             <img src={props.poster_path ? (imageUrl + props.poster_path) : defaultImg} alt={props.title} className="max-w-full" />
-            <h2 className='mt-2'>{props.title}</h2>
+            <h2 className='mt-2 text-white font-bold'>{props.title}</h2>
             
             <div className='flex w-full items-center gap-2'>
                 <FaStar size={24} className="text-cinema-text-1" /> 
