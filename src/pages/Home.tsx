@@ -21,7 +21,7 @@ export function Home(){
     
     return(
         <div>
-            <h2 className="text-4xl text-cinema-text-2 text-center mb-12">- Melhores filmes -</h2>
+            <h2 className="text-4xl text-cinema-text-2 text-center mb-12 font-bold">- Melhores filmes -</h2>
             <div className="flex flex-wrap gap-8 text-white justify-center">
                 {topMovies.length === 0 ? <p>Carregando...</p> : 
                     topMovies.map(movie =>{
