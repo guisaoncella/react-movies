@@ -16,7 +16,7 @@ export function Navbar(){
     }
 
     return(
-        <nav className="flex items-center justify-between px-10 py-4">
+        <nav className="flex items-center justify-between px-5 lg:px-10 py-4">
             <Logo/>
             <form className="flex gap-2" onSubmit={(e) => handleSubmit(e)}>
                 <input type="text" placeholder="Busque um filme" className="p-1 rounded-md"
