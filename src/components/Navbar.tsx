@@ -16,9 +16,10 @@ export function Navbar(){
     }
 
     return(
-        <nav className="flex items-center justify-between px-5 lg:px-10 py-4">
+        <nav className="flex flex-col sm:flex-row items-center justify-center sm:justify-between 
+            gap-y-5 sm:gap-y-0 sm:px-5 lg:px-10 py-4 mb-10 sm:mb-0">
             <Logo/>
-            <form className="flex gap-2" onSubmit={(e) => handleSubmit(e)}>
+            <form className="flex gap-2 ml-4 sm:ml-0" onSubmit={(e) => handleSubmit(e)}>
                 <input type="text" placeholder="Busque um filme" className="p-1 rounded-md"
                     onChange={(e) => setSearch(e.target.value)}
                     value={search} />
